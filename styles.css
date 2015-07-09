@@ -3,10 +3,20 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  /*background-color:#000;*/
+  background-image: url("http://p1.pichost.me/i/52/1758866.jpg");
+  /*background-image: url("http://i.ytimg.com/vi/bP3Fqn8wuFc/maxresdefault.jpg");*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
   /*background-image: url("disco_wall.jpg");*/
   font-size: 18px;
 }
+
+/*body {
+    background-color: #cccccc;
+}
+*/
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
@@ -22,21 +32,63 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:10px solid;
   border-radius:10px;
   position:absolute;
+  /*background-image: url("http://www.sherv.net/cm/emo/funny/2/big-dancing-banana-smiley-emoticon.gif");*/
+
 }
 
 .crazydancerspan{
 
-  border:10px solid blue;
-  border-radius:10px;
+  /*border:10px solid blue;*/
+  /*border-radius:10px;*/
   position:absolute;
 
 } 
 
 
+.crazydancerspannew {
+  position:absolute;
+}
+
 .crazydancer {
     height: 100px;
   width: auto;
+}
+
+.popDancerSpan {
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;  
+}
+
+.weird-dancer {
+  border:10px solid green;
+  width:100px;
+  height:auto;
+  /*background:url('movingbanana.gif') center no-repeat;*/
+  position:absolute;
+  display:block;
+}
+
+/*#logo{
+    width:145px;
+    height:41px;
+    background:url('http://biscuithead.ie/images/logo.png') center no-repeat;                           
+    display:block;
+    float:left;
+    cursor:pointer;
+}*/
+
+.blinkydancer {
+  /*position:absolute;*/
+  width:500px;
+
+  height:auto;
+}
+
+.groovydancer img {
+  width: 50px;
+  height:auto;
 }

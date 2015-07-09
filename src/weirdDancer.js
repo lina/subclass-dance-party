@@ -1,8 +1,20 @@
 
-var makeCrazyDancer = function(top, left, timeBetweenSteps){
-  this.$node = $('<span class="crazydancerspan"></span>');
-  this.$node.append('<img class = "crazydancer" src="http://www.sherv.net/cm/emo/funny/2/big-dancing-banana-smiley-emoticon.gif"></img>');
+var makeWeirdDancer = function(top, left, timeBetweenSteps){
+  this.$node = $('<span class="weird-dancer"></span>');
+  $(".weird-dancer").mouseover(function() {
+    $(".weird-dancer").append('<img src = "movingbanana.gif" height="50" width="auto"></img>')
+  })
 
+// $( "#outer" ).mouseover(function() {
+//   $( "#log" ).append( "<div>Handler for .mouseover() called.</div>" );
+// });
+
+
+// $('#test').html('<img src="/static/on.png" height="64px" width="64px">');
+
+  // this.$node.append('<img class = "crazydancer" src="movingbanana.gif"></img>');
+  this.top = top;
+  this.left = left;
   // this.$node.addClass("crazydancerspannew").rotate({
   //       duration: 200,
   //       angle: 0,
@@ -15,7 +27,7 @@ var makeCrazyDancer = function(top, left, timeBetweenSteps){
 
 
 
-
+  
 // if($(this).hasClass('crazydancerspan')) {
 //     $(this).removeClass('crazydancerspan').rotate({
 //         duration: 200,
@@ -26,27 +38,31 @@ var makeCrazyDancer = function(top, left, timeBetweenSteps){
 
 // };
 
-  makeDancer.apply(this, arguments);
+  makeCrazyDancer.apply(this, arguments);
+  // this.lineUp();
 
   // this.step(); //fixed test 3
   // this.setPosition(); //check thisXXX
 };
 
-makeCrazyDancer.prototype = Object.create(makeDancer.prototype);
-makeCrazyDancer.prototype.constructor = makeCrazyDancer;
+makeWeirdDancer.prototype = Object.create(makeCrazyDancer.prototype);
+makeWeirdDancer.prototype.constructor = makeWeirdDancer;
 
-makeCrazyDancer.prototype.step = function() {
-  makeDancer.prototype.step.apply(this);
+makeWeirdDancer.prototype.randomlymove = function() {
+  // makeCrazyDancer.prototype.step.apply(this);
   // debugger;
   // this.$node.slideUp();
 
   // this.$node.slideDown();
-	this.$node.animate({height: "100px", border:"10px solid green", 
+
+
+  //makes it move
+	this.$node.animate({height: "100px", border:"20px solid green", 
 		left:$("body").width() * Math.random()+"px", 
 		top:$("body").height() * Math.random()+"px"
 
 						}, "slow");
-	this.$node.animate({height: "200px", border:"10px solid green", 
+	this.$node.animate({height: "200px", border:"20px solid green", 
 		left:$("body").width() * Math.random()+"px", 
 		top:$("body").height() * Math.random()+"px"
 						// color: "green",
@@ -61,7 +77,7 @@ makeCrazyDancer.prototype.step = function() {
   
   this.$node.fadeIn();
   // this.$node.fadeOut();  
-  // this.$node.toggle();
+  this.$node.toggle();
 }
 var generateRandDeg = function() {
 	return Math.random()*180;
@@ -79,21 +95,21 @@ var generateRandDeg = function() {
 
 
 
-// var makeCrazyDancer = function(top, left, timeBetweenSteps){
+// var makeWeirdDancer = function(top, left, timeBetweenSteps){
 //   makeBlinkyDancer.apply(this, arguments);
 //   this.step();
 //   this.setPosition();
 // };
 
-// makeCrazyDancer.prototype = Object.create(makeBlinkyDancer.prototype);
-// makeCrazyDancer.prototype.constructor = makeCrazyDancer;
+// makeWeirdDancer.prototype = Object.create(makeBlinkyDancer.prototype);
+// makeWeirdDancer.prototype.constructor = makeWeirdDancer;
 
-// makeCrazyDancer.prototype.step = function() {
-//   makeDancer.prototype.step.apply(this);
+// makeWeirdDancer.prototype.step = function() {
+//   makeCrazyDancer.prototype.step.apply(this);
 //   // debugger;
 //   this.$node.toggle();
 // };
 
-// makeCrazyDancer.prototype.jump = function(){
+// makeWeirdDancer.prototype.jump = function(){
 //   setTimeout(this.jump.bind(this), this.timeBetweenSteps);
 // };

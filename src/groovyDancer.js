@@ -1,7 +1,7 @@
 
-var makeCrazyDancer = function(top, left, timeBetweenSteps){
-  this.$node = $('<span class="crazydancerspan"></span>');
-  this.$node.append('<img class = "crazydancer" src="http://www.sherv.net/cm/emo/funny/2/big-dancing-banana-smiley-emoticon.gif"></img>');
+var makeGroovyDancer = function(top, left, timeBetweenSteps){
+  this.$node = $('<span class="groovydancerspan"></span>');
+  this.$node.append('<img class = "groovydancer" src="https://33.media.tumblr.com/2dfc3369827df9b981e111d7fd8fc732/tumblr_mvemcyarmn1rslphyo1_400.gif"></img>');
 
   // this.$node.addClass("crazydancerspannew").rotate({
   //       duration: 200,
@@ -32,10 +32,10 @@ var makeCrazyDancer = function(top, left, timeBetweenSteps){
   // this.setPosition(); //check thisXXX
 };
 
-makeCrazyDancer.prototype = Object.create(makeDancer.prototype);
-makeCrazyDancer.prototype.constructor = makeCrazyDancer;
+makeGroovyDancer.prototype = Object.create(makeDancer.prototype);
+makeGroovyDancer.prototype.constructor = makeGroovyDancer;
 
-makeCrazyDancer.prototype.step = function() {
+makeGroovyDancer.prototype.step = function() {
   makeDancer.prototype.step.apply(this);
   // debugger;
   // this.$node.slideUp();
@@ -79,21 +79,21 @@ var generateRandDeg = function() {
 
 
 
-// var makeCrazyDancer = function(top, left, timeBetweenSteps){
+// var makeGroovyDancer = function(top, left, timeBetweenSteps){
 //   makeBlinkyDancer.apply(this, arguments);
 //   this.step();
 //   this.setPosition();
 // };
 
-// makeCrazyDancer.prototype = Object.create(makeBlinkyDancer.prototype);
-// makeCrazyDancer.prototype.constructor = makeCrazyDancer;
+// makeGroovyDancer.prototype = Object.create(makeBlinkyDancer.prototype);
+// makeGroovyDancer.prototype.constructor = makeGroovyDancer;
 
-// makeCrazyDancer.prototype.step = function() {
+// makeGroovyDancer.prototype.step = function() {
 //   makeDancer.prototype.step.apply(this);
 //   // debugger;
 //   this.$node.toggle();
 // };
 
-// makeCrazyDancer.prototype.jump = function(){
+// makeGroovyDancer.prototype.jump = function(){
 //   setTimeout(this.jump.bind(this), this.timeBetweenSteps);
 // };

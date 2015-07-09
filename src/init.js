@@ -22,25 +22,72 @@ $(document).ready(function(){
     // var crazyDancerMakerFunction = window[crazyDancerMakerFunctionName];
 
     // make a dancer with a random position
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
+    // var hasInvoked = false;
+    // if(!hasInvoked) {
+    //   var dancer = new dancerMakerFunction(
+    //     randomHeight, 
+    //     randomWidth,
+    //     Math.random() * 1000
+    //   );   
+
+    //   hasInvoked = true;
+      
+    // } else {
+      var randomHeight = $("body").height() * Math.random();
+      var randomWidth = $("body").width() * Math.random();
+      var dancer = new dancerMakerFunction(
+        randomHeight, 
+        randomWidth,
+        Math.random() * 1000
+      );         
+    // }
+ 
+    // var arrOfDancers = [];
+
+    // var dancer = new dancerMakerFunction(
+    //   $("body").height() * Math.random(),
+    //   $("body").width() * Math.random(),
+    //   Math.random() * 1000
+    // );
     // debugger;
     // var crazyDancer = new crazyDancerMakerFunction(
     //   $("body").height() * Math.random(),
     //   $("body").width() * Math.random(),
     //   Math.random() * 1000
     // );
+
+    // var arrOfDancers.push(dancer);
+    // for (var i = 0;i < arrOfDancers.length; i++) {
+    //   dancer.animate({color:"black"});
+    // }
+
+    //   this.$node.animate({height: "100px", border:"10px solid green", left:$("body").width() * Math.random()+"px", 
+    // top:$("body").height() * Math.random()+"px"
+
+    //       }, "slow");
+
+
     // var dancer = new dancerMakerFunction(1000, 1000, 100);
     $('body').append(dancer.$node);
     // $('body').append(crazyDancer.$node);
 
   });
+
+  // lineUp(windows.dancers);
 });
+  var liningUp = function() {
+    // var lineUp = function(array) {
+      for (var i = 0 ; i < array; i++) {
+        window.dancers[i].lineUp();
+      }
+
+    // }
+    // lineUp(window.dancers);    
+  }
 
 
       // <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    
 
       // <a href="#" class="addDancerButton" data-crazy-dancer-maker="makeCrazyDancer">add an up and down dancer</a>  
+
+
