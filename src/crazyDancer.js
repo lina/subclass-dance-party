@@ -1,4 +1,5 @@
 
+// banana 
 var makeCrazyDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="crazydancerspan"></span>');
   this.$node.append('<img class = "crazydancer" src="http://www.sherv.net/cm/emo/funny/2/big-dancing-banana-smiley-emoticon.gif"></img>');
@@ -41,6 +42,8 @@ makeCrazyDancer.prototype.step = function() {
   // this.$node.slideUp();
 
   // this.$node.slideDown();
+
+// this part animates the banana
 	this.$node.animate({height: "100px", border:"10px solid green", 
 		left:$("body").width() * Math.random()+"px", 
 		top:$("body").height() * Math.random()+"px"
@@ -52,7 +55,12 @@ makeCrazyDancer.prototype.step = function() {
 						// color: "green",
 						// backgroundColor: "rgb( 20, 20, 20 )"
 						// "rgb("+generateRandColorNum()+","+ generateRandColorNum()+","_ generateRandColorNum()+")"
-						});
+						}, "slow");
+
+
+
+
+
 	// this.$node.rotate(generateRandDeg);
 	// for (var i = 0; i < 360; i++) {
 		// this.$node.rotate(i);
@@ -63,6 +71,10 @@ makeCrazyDancer.prototype.step = function() {
   // this.$node.fadeOut();  
   // this.$node.toggle();
 }
+
+
+
+
 var generateRandDeg = function() {
 	return Math.random()*180;
 }

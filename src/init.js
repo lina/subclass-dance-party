@@ -40,7 +40,9 @@ $(document).ready(function(){
         randomWidth,
         Math.random() * 1000
       );         
+      window.dancers.push(dancer);
     // }
+
  
     // var arrOfDancers = [];
 
@@ -75,19 +77,43 @@ $(document).ready(function(){
 
   // lineUp(windows.dancers);
 });
-  var liningUp = function() {
-    // var lineUp = function(array) {
-      for (var i = 0 ; i < array; i++) {
-        window.dancers[i].lineUp();
-      }
+  // var liningUp = function() {
+  //   // var lineUp = function(array) {
+  //     for (var i = 0 ; i < array; i++) {
+  //       window.dancers[i].lineUp();
+  //     }
 
-    // }
-    // lineUp(window.dancers);    
-  }
+  //   // }
+  //   // lineUp(window.dancers);    
+  // }
 
 
       // <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    
 
       // <a href="#" class="addDancerButton" data-crazy-dancer-maker="makeCrazyDancer">add an up and down dancer</a>  
+
+
+
+$(".line-up-tag").click(function(){
+  for (var i = 0 ; i < window.dancers.length; i++) {
+    // window.dancers[i].lineUp();
+    window.dancers[i].lineUp(100, 200);
+    window.dancers[i].step = function() {
+      //do nothing;
+    }
+    // window.dancers[i].$node.animate({left:"100px", top:"300px"}, "fast")
+    // setPosition($("body").height()/2, $("body").width()/2);
+  }
+});
+
+
+
+
+
+
+
+
+
+
 
 

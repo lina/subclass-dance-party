@@ -1,30 +1,8 @@
 
+// carlton
 var makeGroovyDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="groovydancerspan"></span>');
   this.$node.append('<img class = "groovydancer" src="https://33.media.tumblr.com/2dfc3369827df9b981e111d7fd8fc732/tumblr_mvemcyarmn1rslphyo1_400.gif"></img>');
-
-  // this.$node.addClass("crazydancerspannew").rotate({
-  //       duration: 200,
-  //       angle: 0,
-  //       animateTo:180});
-
-    // $(this).addClass('crazydancerspan').rotate({
-    //     duration: 200,
-    //     angle: 0,
-    //     animateTo:180});
-
-
-
-
-// if($(this).hasClass('crazydancerspan')) {
-//     $(this).removeClass('crazydancerspan').rotate({
-//         duration: 200,
-//         angle: 180,
-//         animateTo:0
-//   });
-// } else {
-
-// };
 
   makeDancer.apply(this, arguments);
 
@@ -41,31 +19,31 @@ makeGroovyDancer.prototype.step = function() {
   // this.$node.slideUp();
 
   // this.$node.slideDown();
-	this.$node.animate({height: "100px", border:"10px solid green", 
+	this.$node.animate({height: "auto", width: "auto", border:"10px solid green", 
 		left:$("body").width() * Math.random()+"px", 
 		top:$("body").height() * Math.random()+"px"
-
-						}, "slow");
-	this.$node.animate({height: "200px", border:"10px solid green", 
-		left:$("body").width() * Math.random()+"px", 
-		top:$("body").height() * Math.random()+"px"
-						// color: "green",
-						// backgroundColor: "rgb( 20, 20, 20 )"
-						// "rgb("+generateRandColorNum()+","+ generateRandColorNum()+","_ generateRandColorNum()+")"
-						});
+    });
+	// this.$node.animate({height: "auto", width: "auto", border:"10px solid green", 
+	// 	left:$("body").width() * Math.random()+"px", 
+	// 	top:$("body").height() * Math.random()+"px"
+	// 					// color: "green",
+	// 					// backgroundColor: "rgb( 20, 20, 20 )"
+	// 					// "rgb("+generateRandColorNum()+","+ generateRandColorNum()+","_ generateRandColorNum()+")"
+	//   }, "slow");
 	// this.$node.rotate(generateRandDeg);
 	// for (var i = 0; i < 360; i++) {
 		// this.$node.rotate(i);
 	// }
 	this.$node.rotate(generateRandDeg());
   
-  this.$node.fadeIn();
+  // this.$node.fadeIn();
   // this.$node.fadeOut();  
   // this.$node.toggle();
-}
+};
+
 var generateRandDeg = function() {
-	return Math.random()*180;
-}
+	return Math.random()*350;
+};
 
 // this.oldStep(); //ADD LATER
 

@@ -14,16 +14,20 @@ makePopDancer.prototype.step = function() {
   // debugger;
   // this.$node.toggle();
 
-  this.$node.animate({height: "100px", border:"10px solid green", left:$("body").width() * Math.random()+"px", 
-  	top:$("body").height() * Math.random()+"px"
+  //this makes the stick move
 
-					}, "slow");
-  this.$node.animate({height: "200px", border:"10px solid green", left:$("body").width() * Math.random()+"px", 
-  	top:$("body").height() * Math.random()+"px"
-					// color: "green",
-					// backgroundColor: "rgb( 20, 20, 20 )"
-					// "rgb("+generateRandColorNum()+","+ generateRandColorNum()+","_ generateRandColorNum()+")"
-					});
+  // this.$node.animate({height: "100px", border:"10px solid green", left:$("body").width() * Math.random()+"px", 
+  // 	top:$("body").height() * Math.random()+"px"
+
+		// 			}, "slow");
+  // this.$node.animate({height: "200px", border:"10px solid green", left:$("body").width() * Math.random()+"px", 
+  // 	top:$("body").height() * Math.random()+"px"
+		// 			// color: "green",
+		// 			// backgroundColor: "rgb( 20, 20, 20 )"
+		// 			// "rgb("+generateRandColorNum()+","+ generateRandColorNum()+","_ generateRandColorNum()+")"
+		// 			});
+
+
   // this.$node.rotate(generateRandDeg);
   // for (var i = 0; i < 360; i++) {
   	// this.$node.rotate(i);
