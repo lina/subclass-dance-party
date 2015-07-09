@@ -92,3 +92,25 @@ body, a:link, a:visited, a:active{
   /*width: 50px;*/
   /*height:auto;*/
 }
+
+.still-dancer {
+  position:absolute;
+}
+.still-dancer img {
+  /*position: absolute;*/
+  height: 100px;
+  width: auto;
+}
+
+.still-dancer-span {
+  position: absolute;
+}
+
+.still-dancer-div {
+  position: absolute;
+}
+
+
+
+
+

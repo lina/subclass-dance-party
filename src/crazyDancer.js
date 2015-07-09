@@ -2,7 +2,7 @@
 // banana 
 var makeCrazyDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="crazydancerspan"></span>');
-  this.$node.append('<img class = "crazydancer" src="http://www.sherv.net/cm/emo/funny/2/big-dancing-banana-smiley-emoticon.gif"></img>');
+  this.$node.append('<img class="crazydancer" src="http://www.sherv.net/cm/emo/funny/2/big-dancing-banana-smiley-emoticon.gif"></img>');
 
   // this.$node.addClass("crazydancerspannew").rotate({
   //       duration: 200,

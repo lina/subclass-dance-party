@@ -43,77 +43,43 @@ $(document).ready(function(){
       window.dancers.push(dancer);
     // }
 
- 
-    // var arrOfDancers = [];
-
-    // var dancer = new dancerMakerFunction(
-    //   $("body").height() * Math.random(),
-    //   $("body").width() * Math.random(),
-    //   Math.random() * 1000
-    // );
-    // debugger;
-    // var crazyDancer = new crazyDancerMakerFunction(
-    //   $("body").height() * Math.random(),
-    //   $("body").width() * Math.random(),
-    //   Math.random() * 1000
-    // );
-
-    // var arrOfDancers.push(dancer);
-    // for (var i = 0;i < arrOfDancers.length; i++) {
-    //   dancer.animate({color:"black"});
-    // }
-
-    //   this.$node.animate({height: "100px", border:"10px solid green", left:$("body").width() * Math.random()+"px", 
-    // top:$("body").height() * Math.random()+"px"
-
-    //       }, "slow");
-
 
     // var dancer = new dancerMakerFunction(1000, 1000, 100);
     $('body').append(dancer.$node);
     // $('body').append(crazyDancer.$node);
 
   });
+  
 
+
+  $(".line-up-tag").click(function(){
+    for (var i = 0 ; i < window.dancers.length; i++) {
+        console.log("i value1:", i);
+        var leftIdx = i * 100 ;
+        console.log("left position of dancers: (outside step)", leftIdx);
+
+      // window.dancers[i].lineUp();
+      window.dancers[i].step = function() {
+        console.log("i value:", i);
+        console.log("left position of dancers: (inside step)", leftIdx);
+        this.$node.animate({left: leftIdx + "px", top: "200px"}, "fast");
+        //do nothing;
+      }    
+      // window.dancers[i].lineUp(200, 200);
+
+      // window.dancers[i].$node.animate({left:"100px", top:"300px"}, "fast")
+      // setPosition($("body").height()/2, $("body").width()/2);
+    }
+  });
+
+
+
+
+  $(".still-dancer-span").click(function() {
+    console.log("clicked");
+    $(".still-dancer-span").remove();
+    // $(".still-dancer").append('<div class="still-dancer-div"><img class="still-dancer" src="http://orig00.deviantart.net/9849/f/2012/223/8/7/pony_gangnam_style_by_1n33d4hug-d5arai9.gif"></img></div>')
+  });
   // lineUp(windows.dancers);
 });
-  // var liningUp = function() {
-  //   // var lineUp = function(array) {
-  //     for (var i = 0 ; i < array; i++) {
-  //       window.dancers[i].lineUp();
-  //     }
-
-  //   // }
-  //   // lineUp(window.dancers);    
-  // }
-
-
-      // <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    
-
-      // <a href="#" class="addDancerButton" data-crazy-dancer-maker="makeCrazyDancer">add an up and down dancer</a>  
-
-
-
-$(".line-up-tag").click(function(){
-  for (var i = 0 ; i < window.dancers.length; i++) {
-    // window.dancers[i].lineUp();
-    window.dancers[i].lineUp(100, 200);
-    window.dancers[i].step = function() {
-      //do nothing;
-    }
-    // window.dancers[i].$node.animate({left:"100px", top:"300px"}, "fast")
-    // setPosition($("body").height()/2, $("body").width()/2);
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
 
