@@ -1,4 +1,6 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps){
+  this.$node = $('<span class="dancer"></span>');
+  
   makeDancer.apply(this, arguments);
   // this.step(); //fixed test 3
   // this.setPosition(); //check thisXXX

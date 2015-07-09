@@ -4,6 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  /*background-image: url("disco_wall.jpg");*/
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -26,6 +27,16 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.round{
-  
+.crazydancerspan{
+
+  border:10px solid blue;
+  border-radius:10px;
+  position:absolute;
+
 } 
+
+
+.crazydancer {
+    height: 100px;
+  width: auto;
+}

@@ -1,6 +1,10 @@
 
 var makeCrazyDancer = function(top, left, timeBetweenSteps){
+  this.$node = $('<span class="crazydancerspan"></span>');
+  this.$node.append('<img class = "crazydancer" src="movingbanana.gif"></img>');
+
   makeDancer.apply(this, arguments);
+
   // this.step(); //fixed test 3
   // this.setPosition(); //check thisXXX
 };
@@ -11,6 +15,7 @@ makeCrazyDancer.prototype.constructor = makeCrazyDancer;
 makeCrazyDancer.prototype.step = function() {
   makeDancer.prototype.step.apply(this);
   // debugger;
+
   this.$node.toggle();
 }
 
