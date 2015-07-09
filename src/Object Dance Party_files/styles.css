@@ -92,8 +92,8 @@ body, a:link, a:visited, a:active{
   /*position:absolute;*/
   width:auto;
 
-  height:500px;
-  position:relative;
+  height:800px;
+  position:absolute;
 }
 
 .groovydancer img {

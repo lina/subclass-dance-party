@@ -37,9 +37,7 @@ makeBlinkyDancer.prototype.step = function() {
 	// 					}, "slow");
 
   this.$node.animate({
-    marginLeft:"+=10000px"
-    // top: "0px";
-  }, 10000);
+    marginLeft:"+=1000px"}, 1000);
   
 
 
