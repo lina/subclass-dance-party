@@ -75,11 +75,7 @@ $(document).ready(function(){
 
 
 
-  $(".still-dancer-span").click(function() {
-    console.log("clicked");
-    $(".still-dancer-span").remove();
-    // $(".still-dancer").append('<div class="still-dancer-div"><img class="still-dancer" src="http://orig00.deviantart.net/9849/f/2012/223/8/7/pony_gangnam_style_by_1n33d4hug-d5arai9.gif"></img></div>')
-  });
+
   // lineUp(windows.dancers);
 });
 

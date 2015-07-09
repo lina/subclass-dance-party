@@ -19,10 +19,14 @@ makeGroovyDancer.prototype.step = function() {
   // this.$node.slideUp();
 
   // this.$node.slideDown();
-	this.$node.animate({height: "auto", width: "auto", border:"10px solid green", 
+	this.$node.animate({height: "auto", width: "auto", 
 		left:$("body").width() * Math.random()+"px", 
 		top:$("body").height() * Math.random()+"px"
-    });
+    }, "slow");
+  this.$node.animate({height: "auto", width: "auto", 
+    left:$("body").width() * Math.random()+"px", 
+    top:$("body").height() * Math.random()+"px"
+    }, "slow");  
 	// this.$node.animate({height: "auto", width: "auto", border:"10px solid green", 
 	// 	left:$("body").width() * Math.random()+"px", 
 	// 	top:$("body").height() * Math.random()+"px"
@@ -35,7 +39,7 @@ makeGroovyDancer.prototype.step = function() {
 		// this.$node.rotate(i);
 	// }
 	this.$node.rotate(generateRandDeg());
-  
+  this.$node.fadeIn();
   // this.$node.fadeIn();
   // this.$node.fadeOut();  
   // this.$node.toggle();

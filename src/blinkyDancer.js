@@ -1,6 +1,6 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="blinkydancer"></span>');
-  this.$node.append('<img class = "blinkydancer" src="http://media.giphy.com/media/ucaqqmnJ4imAw/giphy.gif"></img>');
+  this.$node.append('<img class = "blinkydancer-img" src="http://media.giphy.com/media/ucaqqmnJ4imAw/giphy.gif"></img>');
 
   // $(".dancer").mouseover(function() {
   //   $(".dancer").append('<img src = "http://media.giphy.com/media/ucaqqmnJ4imAw/giphy.gif"></img>')
@@ -9,6 +9,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps){
   // this.step(); //fixed test 3
   // this.setPosition(); //check thisXXX
   // this.lineUp();
+  makeDancer.apply(this, arguments);
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -29,18 +30,18 @@ makeBlinkyDancer.prototype.step = function() {
   // 					// backgroundColor: "rgb( 20, 20, 20 )"
   // 					// "rgb("+generateRandColorNum()+","+ generateRandColorNum()+","_ generateRandColorNum()+")"
   // 					});
-	this.$node.animate({height: "100px", border:"20px solid green", 
-		left:$("body").width() * Math.random()+"px", 
+	this.$node.animate({
+		left:0, 
 		top:$("body").height() * Math.random()+"px"
 
 						}, "slow");
-	this.$node.animate({height: "200px", border:"20px solid green", 
-		left:$("body").width() * Math.random()+"px", 
+	this.$node.animate({
+		left:$("body").width() , 
 		top:$("body").height() * Math.random()+"px"
 						// color: "green",
 						// backgroundColor: "rgb( 20, 20, 20 )"
 						// "rgb("+generateRandColorNum()+","+ generateRandColorNum()+","_ generateRandColorNum()+")"
-						});
+						}, "slow");
 
   // this.$node.rotate(generateRandDeg);
   // for (var i = 0; i < 360; i++) {

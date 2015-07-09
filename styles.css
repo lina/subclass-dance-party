@@ -63,6 +63,10 @@ body, a:link, a:visited, a:active{
   position:absolute;  
 }
 
+.groovydancerspan {
+  position:absolute;
+}
+
 .weird-dancer {
   border:10px solid green;
   width:100px;
@@ -83,9 +87,10 @@ body, a:link, a:visited, a:active{
 
 .blinkydancer {
   /*position:absolute;*/
-  width:500px;
+  width:1000px;
 
   height:auto;
+  position:absolute;
 }
 
 .groovydancer img {
@@ -110,6 +115,15 @@ body, a:link, a:visited, a:active{
   position: absolute;
 }
 
+.gangnam-sway-toggle {
+
+  background:url("http://i.imgur.com/36sRcAs.gif");
+}
+
+.still-dancer img {
+  height: 200px;
+  width: auto;
+}
 
 
 

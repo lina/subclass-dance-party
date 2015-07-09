@@ -28,6 +28,8 @@ makePopDancer.prototype.step = function() {
 		// 			});
 
 
+
+
   // this.$node.rotate(generateRandDeg);
   // for (var i = 0; i < 360; i++) {
   	// this.$node.rotate(i);
