@@ -27,7 +27,7 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-
+    // debugger;
     // var crazyDancer = new crazyDancerMakerFunction(
     //   $("body").height() * Math.random(),
     //   $("body").width() * Math.random(),
@@ -36,6 +36,7 @@ $(document).ready(function(){
     // var dancer = new dancerMakerFunction(1000, 1000, 100);
     $('body').append(dancer.$node);
     // $('body').append(crazyDancer.$node);
+
   });
 });
 
