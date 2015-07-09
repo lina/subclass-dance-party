@@ -1,32 +1,19 @@
+
 var makeCrazyDancer = function(top, left, timeBetweenSteps){
   makeDancer.apply(this, arguments);
-
-
-  // // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
-  // // so we must keep a copy of the old version of this function
-  // blinkyDancer.step = function(){
-  //   // call the old version of step at the beginning of any call to this new version of step
-  //   oldStep();
-  //   // toggle() is a jQuery method to show/hide the <span> tag.
-  //   // See http://api.jquery.com/category/effects/ for this and
-  //   // other effects you can use on a jQuery-wrapped html tag.
-  //   blinkyDancer.$node.toggle();
-  // };
-
-  // return blinkyDancer;
-
-  // this.oldStep = this.step;
-  this.step();
-  this.setPosition();
+  // this.step(); //fixed test 3
+  // this.setPosition(); //check thisXXX
 };
 
 makeCrazyDancer.prototype = Object.create(makeDancer.prototype);
 makeCrazyDancer.prototype.constructor = makeCrazyDancer;
 
-// makeCrazyDancer.prototype.step = function() {
-//   makeDancer.prototype.step.apply(this);
-//   this.$node.toggle();
-// }
+makeCrazyDancer.prototype.step = function() {
+  makeDancer.prototype.step.apply(this);
+  // debugger;
+  this.$node.toggle();
+}
+
 
 // this.oldStep(); //ADD LATER
 
@@ -39,11 +26,22 @@ makeCrazyDancer.prototype.constructor = makeCrazyDancer;
 
 
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
-makeBlinkyDancer.prototype.step = function() {
-  makeDancer.prototype.step.apply(this);
-  // debugger;
-  this.$node.toggle();
-}
+// var makeCrazyDancer = function(top, left, timeBetweenSteps){
+//   makeBlinkyDancer.apply(this, arguments);
+//   this.step();
+//   this.setPosition();
+// };
+
+// makeCrazyDancer.prototype = Object.create(makeBlinkyDancer.prototype);
+// makeCrazyDancer.prototype.constructor = makeCrazyDancer;
+
+// makeCrazyDancer.prototype.step = function() {
+//   makeDancer.prototype.step.apply(this);
+//   // debugger;
+//   this.$node.toggle();
+// };
+
+// makeCrazyDancer.prototype.jump = function(){
+//   setTimeout(this.jump.bind(this), this.timeBetweenSteps);
+// };
