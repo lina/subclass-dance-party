@@ -35,7 +35,7 @@ $(document).ready(function(){
     // } else {
       var randomHeight = $("body").height() * Math.random();
       var randomWidth = $("body").width() * Math.random();
-      var randomTime = Math.random() * 1000;
+      var randomTime = Math.random() * 10000;
       
       var dancer = new dancerMakerFunction(
         randomHeight, 
